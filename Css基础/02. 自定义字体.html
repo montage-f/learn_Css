@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*也可以直接引入带有字体的css样式, 然后写font-family设置就行了*/
+        @font-face {
+            font-family: 'IF';
+            src: url('./IndieFlower.ttf');
+        }
+        .custom-font {
+            font-family: 'IF',serif;  /*serif就是字体族, 当找不到前面IF这个字体的时候, 就会去系统库里面找一个衬线字体*/
+        }
+    </style>
+</head>
+<body>
+<div class="custom-font">你好, hello world</div>
+</body>
+</html>
