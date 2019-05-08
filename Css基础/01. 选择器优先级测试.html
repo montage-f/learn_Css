@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid brown;
+            margin: 0 auto;
+        }
+
+        div.box1 {              /*+ 11*/
+            background: black;
+        }
+
+        div[class=box1] {       /*+ 11*/
+            background: red;
+        }
+
+        .box1 {                 /*+ 10*/
+            background: green;
+        }
+
+        div.box1.box2 {          /*+ 21*/
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="box1 box2">
+
+</div>
+</body>
+</html>
