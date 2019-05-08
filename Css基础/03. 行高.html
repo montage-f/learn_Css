@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        span {
+            background: blue;
+            color: white;
+        }
+
+        .c1 {
+            line-height: 4px;
+        }
+
+        .c2 {
+            line-height: 8px;
+        }
+
+        .c3 {
+            line-height: 30px;
+        }
+
+        .c4 {
+            line-height: 28px;
+        }
+
+        .ccc1 {
+            font-size: 12px;
+        }
+
+        .ccc2 {
+            font-size: 18px;
+        }
+
+        .ccc3 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<p>问题1: 字体的行高都不一样, 为什么渲染后的高度确实一样的?</p>
+<p>解答: 行高并不会影响行内元素的高度, 但是它会撑起包裹他的块级元素高度.</p>
+<p>问题2: 当文字和图片在一行的时候, 图片的底部会出现一个小缝隙, 为什么会有这个缝隙? 该怎么解决这个缝隙?</p>
+<p>解答: 因为img标签,默认是inline元素, 所以当与文字在一行的时候, 会以字体基线对齐, 从而会有一个3px左右的缝隙, 我们可以通过设置vertical-align:bottom;或者将img标签变成跨级元素block,
+   那么就会解决这个问题</p>
+<div>
+    <span class="c1">inline box xfg中文</span>
+    <span class="c2">inline box</span>
+    <span class="c3">inline box</span>
+    inline box
+    <span class="c4">inline box</span>
+</div>
+
+<div style="border:solid 1px red;">
+    <span style="background:blue;color:#fff;font-size:20px;line-height:60px;">
+        垂直居中xfg
+    </span>
+</div>
+
+<div class="cc1">
+    只有inline 可以设置vertical-align这个属性, 他是根据字体基线来设置对齐方式
+    <span class="ccc1" style="vertical-align: middle;">
+        第一段
+    </span>
+    <span class="ccc2" style="vertical-align: middle;">
+        第二段
+    </span>
+    <span class="ccc3" style="vertical-align: middle;">
+        第三段
+    </span>
+</div>
+
+<div style="background:red;">
+    <span>文字</span>
+    <img src="./test.png" alt="" style="vertical-align: bottom;">
+</div>
+
+<div style="background:red;">
+    <span>文字</span>
+    <img src="./test.png" alt="" style="display:block;">
+</div>
+
+<div>
+    <div style="float:left;">
+        <span>第一段</span>
+    </div>
+    <div style="float:left;">
+        <span>第二段</span>
+    </div>
+</div>
+</body>
+</html>
