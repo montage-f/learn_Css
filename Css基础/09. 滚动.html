@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box {
+      height: 100px;
+      width: 200px;
+      border: 1px solid #ccc;
+      float: left;
+      margin-left:20px;
+    }
+
+    .box:nth-of-type(1) {
+      overflow: hidden;
+    }
+
+    .box:nth-of-type(2) {
+      overflow: visible;
+    }
+
+    .box:nth-of-type(3) {
+      overflow: scroll;
+    }
+
+    .box:nth-of-type(4) {
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  overflow: hidden;
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+<div class="box">
+  overflow: visible;
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+<div class="box">
+  overflow: scroll;
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+<div class="box">
+  overflow: auto;
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+</body>
+</html>
