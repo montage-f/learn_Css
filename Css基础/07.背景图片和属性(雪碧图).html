@@ -4,7 +4,78 @@
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
-<body>
+<style>
+  div {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
 
+  .bg1 {
+    /*在使用复合写法的时候, 是不需要用逗号隔开的*/
+    background: red url("./图片/7a075e1e0eb9997bc588d1f4933308d2.jpg") no-repeat;
+    background-size: 100px 100px;
+  }
+
+  .bg2 {
+    background: blue;
+
+  }
+
+  .bg2 .test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: url('./图片/0ecad4d08e435b42d08664abb60360ef.jpeg');
+    background-size: 100px 100px;
+  }
+
+  .bg3 {
+    position: relative;
+    background: rgba(37, 255, 91, 0.3);
+  }
+
+  .bg3 .img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fff url("./图片/sprite.png") no-repeat;
+
+  }
+
+  .bg3 .img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fff url("./图片/sprite.png") no-repeat -100px 0;
+  }
+
+  .bg3 .img:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fff url("./图片/sprite.png") no-repeat -400px -300px;
+  }
+</style>
+<body>
+<div class="bg1"></div>
+<div class="bg2">
+  <div class="test"></div>
+</div>
+<div class="bg3">
+  <div class="img"></div>
+  <div class="img"></div>
+  <div class="img"></div>
+</div>
 </body>
 </html>
