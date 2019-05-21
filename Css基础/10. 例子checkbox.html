@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*当前阶段只能使用相邻的两个标签, 如果使用嵌套的话, 无法选中父元素*/
+    input[type=checkbox]:nth-of-type(1):checked + label {
+      background: #000000;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+<div>
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">
+    点击我背景色改变
+  </label>
+
+  <label>
+    <input type="checkbox">单选按钮背景变色
+  </label>
+</div>
+</body>
+</html>
