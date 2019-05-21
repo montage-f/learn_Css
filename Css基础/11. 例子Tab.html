@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+
+  .title {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+  }
+
+  input[type=radio]:checked + label {
+    background: #000;
+    color: white;
+  }
+
+  input[type=radio]:checked ~ span {
+    display: block;
+  }
+
+  p {
+    border: 1px solid #ccc;
+    height: 20px;
+    flex: 1;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  p span {
+    position: absolute;
+    left: 0;
+    width: 500px;
+    height: 300px;
+    display: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+</style>
+<body>
+<div class="title">
+  <p>
+    <input type="radio" name="tab" id="tab1" checked>
+    <label for="tab1">tab1</label>
+    <span>123</span>
+  </p>
+  <p>
+    <input type="radio" name="tab" id="tab2">
+    <label for="tab2">tab2</label>
+    <span>456</span>
+  </p>
+  <p>
+    <input type="radio" name="tab" id="tab3">
+    <label for="tab3">tab3</label>
+    <span>789</span>
+  </p>
+</div>
+
+</body>
+</html>
