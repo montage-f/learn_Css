@@ -169,6 +169,46 @@
             - 特性检测
             - 针对性加class
 
+    04. Css布局
+        01. float + margin
+            - 元素浮动
+            - 脱离文档流,但是不会脱离文本流
+            - 使用float属性,该元素会形成一个'块'
+            - 若父级高度没有其他高度将其撑开, 那么就会产生父级高度塌陷
+        02. inline - block
+            - 像文本一样排block元素
+            - 需要处理间隙-将父元素的字体设置为0, 可以处理
+        03. flex
+            - 弹性盒子
+            - 使用之后, 子盒子自动并列
+            - 指定宽度即可
+        04. grid
+        - 盒模型
+            01. content  => width + height
+            02. padding
+            03. border
+            04. margin 距离周围元素的距离
+            05. 盒子占用空间: content + border + padding
+        05. 响应式的布局和设计
+            - 在不同的设备上正常使用
+            - 一般主要处理屏幕大小问题
+            - 主要方法:
+                01. 隐藏 + 折行 + 自适应空间
+                02. rem/ viewport/ media query
+
+    99. Css面试题
+            - css样式(选择器)的优先级?
+            - 雪碧图的作用?
+            - 自定义字体的使用场景?
+            - base64的使用?
+            - 伪元素和伪类的区别?
+            - 如何美化checkbox?
+            - 实现两栏(三栏)布局的方法?
+            - position:relative/absolute/fixed有什么区别?
+            - display:inline-block的间隙怎么处理?
+            - 如何清除浮动, 为什么清除浮动?
+            - 如何适配移动端的页面?
+
 
 
 03. JavaScript

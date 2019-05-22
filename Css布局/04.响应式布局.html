@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <title>Title</title>
+  <style>
+    .container {
+      max-width: 800px;
+      height: 300px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .container .aside {
+      width: 200px;
+      color: white;
+      background: #000;
+    }
+
+    .container .content {
+      flex: 1;
+      background: red;
+    }
+
+    /*当宽度小于640的时候, .aside就会被隐藏掉, 大范围的应该放到上面, 小范围的放在下面*/
+    @media (max-width: 640px) {
+      .aside {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="aside">
+    我是侧边栏 <br>
+    切换到移动端我会被隐藏掉
+  </div>
+  <div class="content">
+    我是内容栏
+  </div>
+</div>
+</body>
+</html>
