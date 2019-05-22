@@ -12,8 +12,7 @@
             06. base
         - body内部元素
             01. div/section/article/aside/header/footer
-            02. p
-            03. span/em/strong
+            0
             04. table/thead/tbody/tr/th/td
             05. ul/li,ol/li,dl/dt/dd
             06. a
@@ -195,19 +194,25 @@
             - 主要方法:
                 01. 隐藏 + 折行 + 自适应空间
                 02. rem/ viewport/ media query
-
+    05. Css预处理器-less
+        - 嵌套
+        - 变量 @fontSize:12px, 变量需要带单位的就带上单位, 运算的时候也要带单位
+            - 通常是公共同一个值的时候使用变量, 在后期变更的时候, 易于修改
+        - mixin .fontSize(@color){}
+            - 通常在css层面就完成了复用, 不需要到html里面再去引用这个类
+        -
     99. Css面试题
-            - css样式(选择器)的优先级?
-            - 雪碧图的作用?
-            - 自定义字体的使用场景?
-            - base64的使用?
-            - 伪元素和伪类的区别?
-            - 如何美化checkbox?
-            - 实现两栏(三栏)布局的方法?
-            - position:relative/absolute/fixed有什么区别?
-            - display:inline-block的间隙怎么处理?
-            - 如何清除浮动, 为什么清除浮动?
-            - 如何适配移动端的页面?
+        - css样式(选择器)的优先级?
+        - 雪碧图的作用?
+        - 自定义字体的使用场景?
+        - base64的使用?
+        - 伪元素和伪类的区别?
+        - 如何美化checkbox?
+        - 实现两栏(三栏)布局的方法?
+        - position:relative/absolute/fixed有什么区别?
+        - display:inline-block的间隙怎么处理?
+        - 如何清除浮动, 为什么清除浮动?
+        - 如何适配移动端的页面?
 
 
 
