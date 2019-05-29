@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="box">
+  你好
+</div>
+</body>
+<script>
+  class Element {
+    constructor(className) {
+      this.element = document.querySelector(className);
+    }
+
+    changeInnerHtml(value) {
+      if (value) {
+        this.element.innerHTML = value;
+        return this;
+      } else {
+        return this.element.innerHTML;
+      }
+    }
+
+    on(type, fn) {
+      this.element.addEventListener(type, fn);
+      return this;
+    }
+  }
+
+  let element = new Element('.box');
+  element.changeInnerHtml('大侠请不要点我!').on('click', function () {
+    this.innerHTML = '两秒之后, 我就变了';
+    setTimeout(() => {
+      this.innerHTML = '我变了';
+    }, 2000);
+  });
+
+</script>
+</html>
