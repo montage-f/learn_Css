@@ -217,3 +217,43 @@
 
 
 03. JavaScript
+    01. typeof 运算符
+        - 注意: **只能用来区分值类型,但是除了函数**
+        - typeof undefined => undefined
+        - typeof 'abc' => string
+        - typeof 123 => number
+        - typeof true => boolean
+        - typeof {} => object
+        - typeof [] => object
+        - typeof null => object
+        - typeof console.log => function
+    02. 变量计算-强制类型转换
+        - 字符串的拼接
+            - let a = 10 + 20 => 30
+            - let a = 10 + '20' => 1020
+        - == 运算符
+            - 100 == '100' => true
+            - 0 == '' => true
+            - null == undefined => true
+        - if语句
+            - if(true){}
+            - if(100){}
+            - if(''){}
+        - 逻辑运算
+            - 10&&0 => 0
+            - '' || 'abc' => 'abc'
+    03. instanceof
+        - 用于判断**引用类型**属于哪个**构造函数**的方法
+
+    99. JavaScript面试题
+        - JS中使用typeof能得到的哪些类型?(变量类型)
+        - 何时使用===何时使用==?(强制类型转换)
+        - window.onload 和 DOMContentLoaded 的区别?(浏览器的渲染过程)
+        - 用JS创建10个< a > 标签, 点击的时候弹出对应的序号(作用域)
+        - 简书如何实现一个 **模块加载器**, 实现类似 require.js 的基本功能.(JS模块化)
+        - 实现数组的随机排序.(JS的基础算法)
+        - JS中有哪些内置函数
+        - 如何准确判断一个变量是数组类型
+        - 写一个原型链继承的例子
+        - 描述new一个对象的过程
+        - zepto(或其他框架) 源码中如何使用原型链
