@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+执行上下文 <br>
+01. 范围: 一段<\script><\/script>或者一个函数 <br>
+02. 全局: 变量定义, 函数声明, 一段<\script> <br>
+03. 函数: 变量定义, 函数声明, this, argument, 函数 <br>
+ps: 注意<b>函数声明</b>和<b>函数表达式</b>的区别
+</body>
+<script>
+  fn('张三');
+
+  // 函数声明
+  function fn(name) {
+    console.log(name);
+
+  }
+
+  // 函数表达式
+  let f = function (name) {
+    console.log(name);
+  };
+  f('小红');
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+01. this要在执行时才能确定, 定义时无法确认 <br>
+
+</body>
+<script>
+  let a = {
+    name: '小芳',
+    sayName() {
+      let self = '';
+      if (this.toString() !== '[object Window]') {
+        self = JSON.stringify(this);
+      } else {
+        self = window;
+      }
+      console.log(`${this.name}-我是被${self}对象调用`);
+    }
+  };
+  a.sayName();
+  a.sayName.call({name: '小红'});
+  let fn = a.sayName;
+  fn();
+</script>
+</html>
